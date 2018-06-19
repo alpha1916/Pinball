@@ -4,9 +4,3 @@
 window.game = {
 	eventManager: require('onfire')
 };
-
-window.constants = {
-	Event: {
-		CastBall: 'event_cast_ball',
-	}
-};

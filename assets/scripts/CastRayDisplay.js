@@ -9,10 +9,11 @@ cc.Class({
 	},
 
 	onLoad: function(){
-		this.balls = [];
-		for(let i = 0; i < 5; ++i){
-			let ball = this.node.getChildByName('ball' + i);
-			cc.log('ball' + ball);
+		var ballTemplate = this.node.getChildByName('ball');
+		this.balls = [ballTemplate];
+		for(let i = 0; i < 9; ++i){
+			let ball = cc.instantiate(ballTemplate);
+			ball.parent = ballTemplate.parent;
 			this.balls.push(ball);
 		}
 
