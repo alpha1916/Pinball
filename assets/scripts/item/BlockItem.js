@@ -51,13 +51,13 @@ cc.Class({
 	},
 
 	onPostSolve: function (contact, selfCollider, otherCollider) {
+		otherCollider.body.gravityScale = constants.ReboundGravityScale;
 		if(this.count == 1){
 			game.eventManager.fireSync(constants.Event.ItemBomb, this.node);
 			return;
 		}
 		this.updateCount(--this.count);
 		this.dither();
-		otherCollider.body.gravityScale = constants.ReboundGravityScale;
 	},
 
 

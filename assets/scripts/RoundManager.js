@@ -71,7 +71,7 @@ let RoundManager = cc.Class({
 	},
 
 	newRound () {
-		let list = [0, 1, 2, 3, 4, 5];
+		let list = [0, 1, 2, 3, 4];
 		let newCount = list.length - utils.randomInt(2, 5);
 		// let tray = new cc.Node();
 		// tray.setContentSize(600, 80);
@@ -79,13 +79,13 @@ let RoundManager = cc.Class({
 			let idx = utils.randomInt(0, list.length - 1);
 			list.splice(idx, 1);
 		}
-		cc.log('count', newCount);
+		// cc.log('count', newCount);
 
 		let width = this.node.width;
 		let height = 100;
 		let itemWidth = 64;
 		let padding = 80;
-		let count = 6;
+		let count = 5;
 		let spacing = (width - padding * 2 - itemWidth * count) / (count - 1);
 		let stride = spacing + itemWidth;
 		let ox = -width / 2 + padding + itemWidth / 2;
